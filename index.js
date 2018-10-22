@@ -13,8 +13,8 @@ module.exports = function canvasBuffer (canvas, type, quality) {
     ? nativeImage.createFromDataURL(data) // electron v0.36+
     : nativeImage.createFromDataUrl(data) // electron v0.30
   if (/^image\/jpe?g$/.test(type)) {
-    return img.toJpeg(Math.floor(quality * 100))
+    return img.toJPEG(Math.floor(quality * 100))
   } else {
-    return img.toPng()
+    return img.toPNG()
   }
 }
